@@ -1,0 +1,83 @@
+/* Objective function */
+min: - 0.0054fpdi - 0.0054fpdo + 0.05apdi + 0.05apdo + 0.0002pi + 0.0002po - 0.5fsi - 0.5fso;
+
+apdi = 0.0 hi + -0.0 li + 4.45635 ri + -0.0 ci + -0.48299 si + -0.0 ti + 0.02517 fTempIi + 0.05298 ami + -37.372;
+asi = 0.0 hi + 0.0 li + 0.0 ri + 0.0 ci + -0.0 si + 0.0 ti + -0.0 fTempIi + 0.00112 ami + -0.00571;
+aTempOi = 0.0 hi + -0.0 li + 0.45612 ri + -0.14317 ci + -0.0411 si + -0.0 ti + 0.66604 fTempIi + -0.00628 ami + 6.57596;
+fpdi = 0.0 hi + -0.0 li + 0.3045 ri + -1.35456 ci + -0.00054 si + -0.0 ti + -0.01488 fTempIi + 5e-05 ami + 5.67773;
+fsi = 0.0 hi + -0.0 li + 0.0 ri + -0.05 ci + -0.0 si + -0.0 ti + -0.0 fTempIi + 0.0 ami + 0.38667;
+fTempOi = 0.0 hi + 0.0 li + -0.48241 ri + 0.15298 ci + 0.04322 si + 0.0 ti + 0.3076 fTempIi + -0.0044 ami + 9.23636;
+pi = 0.0 hi + -0.0 li + 39.72222 ri + 3.5 ci + -1.14762 si + -0.0 ti + 0.0 fTempIi + 0.0 ami + 116.23016;
+
+apdo = 0.0 ho + -0.0 lo + 4.09325 ro + 11.6455 co + -0.76621 so + 0.0 to + 0.03129 fTempIo + 0.08291 amo + -75.52638;
+aso = 0.0 ho + -0.0 lo + 0.0 ro + 0.14143 co + -0.0 so + 0.0 to + -0.0 fTempIo + 0.00105 amo + -0.21714;
+aTempOo = 0.0 ho + -0.0 lo + -0.16378 ro + 0.68757 co + 0.03273 so + 0.0 to + 0.79333 fTempIo + 0.00746 amo + -2.56103;
+fpdo = 0.0 ho + 0.0 lo + 6.09167 ro + -110.8291 co + 0.01281 so + -0.0 to + -0.40444 fTempIo + -0.00227 amo + 172.27552;
+fso = 0.0 ho + 0.0 lo + 0.0 ro + -0.35 co + 0.0 so + -0.0 to + 0.0 fTempIo + 0.0 amo + 1.06;
+fTempOo = 0.0 ho + 0.0 lo + 0.17044 ro + -0.7373 co + -0.03499 so + -0.0 to + 0.16374 fTempIo + 0.00621 amo + 14.97343;
+po = 0.0 ho + 0.0 lo + 43.41667 ro + -18.55556 co + -2.7881 so + -0.0 to + 0.0 fTempIo + -0.0 amo + 190.17857;
+
+/* Variable bounds */
+aTempOi > 18.6;
+1 =r6i + r8i + r10i + r12i + r14i;
+ri =6r6i + 8r8i + 10r10i + 12r12i + 14r14i;
+1 =s25i + s30i + s40i;
+si =25s25i + 30s30i + 40s40i;
+ti = 2;
+apdi > 100;
+apdi < 300;
+asi > 0;
+asi < 3;
+aTempOi > 5;
+aTempOi < 25;
+fpdi > 100;
+fpdi < 300;
+fsi > 0;
+fsi < 1.25;
+fTempOi > 5;
+fTempOi < 25;
+pi > 0;
+ri > 6;
+ri < 10;
+ci > 3;
+ci < 60;
+si > 25;
+si < 60;
+ti > 1;
+ti < 3;
+fTempIi > 5;
+fTempIi < 25;
+
+/* aTempOo < 11.4; */
+1 =r6o + r8o + r10o + r12o + r14o;
+ro =6r6o + 8r8o + 10r10o + 12r12o + 14r14o;
+1 =s25o + s30o + s40o;
+so =25s25o + 30s30o + 40s40o;
+to = 1;
+apdo > 100;
+apdo < 300;
+aso > 0;
+aso < 3;
+aTempOo > 5;
+aTempOo < 25;
+fpdo > 100;
+fpdo < 300;
+fso > 0;
+fso < 1.25;
+fTempOo > 5;
+fTempOo < 25;
+po > 0;
+ro > 10;
+ro < 14;
+co > 1;
+co < 3;
+so > 25;
+so < 60;
+to > 1;
+to < 3;
+fTempIo > 5;
+fTempIo < 25;
+int hi,li,si,ti,ci,ri,ami;
+int ho,lo,so,to,co,ro,amo;
+bin s25i,s30i,s40i,s50i,s60i,r6i,r8i,r10i,r12i,r14i;
+bin s25o,s30o,s40o,s50o,s60o,r6o,r8o,r10o,r12o,r14o;

@@ -1,0 +1,10 @@
+ratio: 0.35
+avg: 0.9621428571428571  with len=7
+apd: 0.96
+as: 1.0
+aTempO: 0.975
+fpd: 0.88
+fs: 0.975
+fTempO: 0.965
+p: 0.98
+
